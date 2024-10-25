@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Conect Comunidad</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(27, 27, 27);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            background-color: #F2D388;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .logo img {
+            width: 230px;
+            padding: 10px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu a:hover {
+            color: rgb(122, 122, 122);
+        }
+
+        .navegacion {
+            display: flex;
+            align-items: center;
+            padding-right: 40px;
+        }
+
+        .iconos img {
+            width: 25px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 60px 100px 50px 100px;
+            align-items: center;
+            background-color: #A7D2CB;
+            overflow-y: scroll;
+        }
+
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            margin-top: 20px;
+        }
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            background-color: #895769;
+            flex: 1 0 200px;
+            margin: 10px;
+            padding: 30px 30px 20px 30px;
+            box-shadow: 2px 4px 6px 0px  rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .card p{
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        .imagen{
+            
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .card button{
+            background-color: rgb(255, 255, 255);
+            border: 0px;
+            margin-top: 30px;
+            padding: 10px;
+            color: #000000;
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+
+        #cocinadecasa{
+            background-image: url(img/cocinadecasa.jpg);
+            background-position: 0px;
+            background-size: cover;
+        }
+
+        #cocinaasiatica{
+            background-image: url(img/comidaasiatica.jpg);
+            background-position: 0px;
+            background-size: cover;
+        }
+
+        #postres{
+            background-image: url(img/postre.jpg);
+            background-size: cover;
+            background-position: 0px;
+        }
+
+        #comidacallejera{
+            background-image: url(img/comidacallejera.jpg);
+            background-position: 0px;
+            background-size: cover;
+        }
+
+        #cocteleros{
+            background-image: url(img/cocteleros.jpg);
+            background-position: 0px;
+            background-size: cover;
+        }
+
+        .comentarios{
+            margin: 10px;
+            padding: 30px 30px 20px 30px;
+            color: rgb(27, 27, 27);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #F2D388;
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        .Copyright {
+            color: rgb(27, 27, 27);
+        }
+
+        .footer ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer a:hover {
+            color: rgb(122, 122, 122);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+
+            <div class="logo">
+                <a href="./index-LP.html"><img src="img/LOGO.png" alt="Logo"></a>
+            </div>
+
+            <div class="navegacion">
+
+                <ul class="menu">
+                    <li><a href="./index-LP.html">Home</a></li>
+                    <li><a href="./index-Recetas.html">Recetas</a></li>
+                    <li><a href="./index-Intercambios.html">Comunidad</a></li>
+                    <li><a href="./index-desafios.html">Desafios</a></li>
+                </ul>
+
+                <div class="iconos">
+                    <a href="./index-login.html"><img src="img/usuario.png" alt="Usuario"></a>
+                    <a href="./index-contacto.html"><img src="img/ig.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>COMUNIDAD</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div id="cocinadecasa" class="imagen"></div>
+                    <h3>Cocina de casa</h3>
+                    <p>La comida de nuestras abuelas.</p>
+                    <button>UNIRME</button>
+                </div>
+
+                <div class="card">
+                    <div id="cocinaasiatica" class="imagen"></div>
+                    <h3>Cocina Aasiática</h3>
+                    <p>China, Japón, India...</p>
+                    <button>UNIRME</button>
+                </div>
+
+                <div class="card">
+                    <div id="postres" class="imagen"></div>
+                    <h3>Postres</h3>
+                    <p>Los amantes de Jordi Roca.</p>
+                    <button>UNIRME</button>
+                </div>
+
+                <div class="card">
+                    <div id="comidacallejera" class="imagen"></div>
+                    <h3>Comida callejera</h3>
+                    <p>La gastronomía de la calle.</p>
+                    <button>UNIRME</button>
+                </div>
+
+                <div class="card">
+                    <div id="cocteleros" class="imagen"></div>
+                    <h3>Cocteleros</h3>
+                    <p>Agitado no mezclado.</p>
+                    <button>UNIRME</button>
+                </div>
+
+                <div class="comentarios">
+                    <form action="enviar_comentario.php" method="post">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                      
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                      
+                        <label for="comment">Comentario</label>
+                        <textarea id="comemnt" name="comment" required></textarea>
+                      
+                        <button type="submit">Enviar</button>
+                      </form> 1 
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            <div class="Copyright">© 2024 Chef Connect |</div>
+            <ul>
+                <li><a href="./index-TC.html">Terminos y condiciones</a></li>
+                <li><a href="./index-contacto.html">Contacto</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
