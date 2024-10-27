@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetas</title>
+    <title>Chef Conect Recetas</title>
 
     <style>
         * {
@@ -43,6 +43,24 @@
             padding: 10px;
         }
 
+        .secciones {
+            display: none;
+            /* Oculta el menú por defecto */
+            top: 100%;
+            /* Coloca el menú justo debajo de la fila */
+            left: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Muestra el menú cuando el usuario pasa el ratón sobre la fila */
+        .secciones:hover {
+            display: block;
+        }
+
         .menu {
             display: flex;
             justify-content: flex-end;
@@ -64,51 +82,79 @@
             width: 40%;
         }
 
-        .secciones{
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 60px 100px 50px 100px;
+            align-items: center;
+            background-color: #A7D2CB;
+            overflow-y: scroll;
+        }
+
+        .secciones {
             display: flex;
             justify-content: center;
+            align-content: flex-start;
             padding: 10px;
             background-color: #F2D388;
             font-family: Arial, Helvetica, sans-serif;
 
         }
-        .grid-container{
+
+        .grid-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px
         }
+
         .cards {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             align-items: stretch;
+            margin-top: 20px;
         }
 
-        .card{
-            background-color:#A7D2CB;
+        .card {
+            display: flex;
+            flex-direction: column;
+            background-color: #895769;
             color: white;
-            padding: 20px;
-            flex-grow: 1;
-            flex-shrink: 0;
-            flex-basis: 200px;
+            width: 250px;
+            flex: 1 0 220px;
+            margin: 10px;
+            /* padding: 30px 30px 20px 30px; */
+            box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
         }
-        .card img{
+
+        .card img {
             max-width: 100%;
         }
 
-        .card .text{
+        .card p {
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        .card .text {
             display: flex;
             flex-direction: column;
             padding: 0 20px 20px;
         }
 
-        .card .button{
-            background: grey;
+        .card button {
+            background: white;
             border: 0;
             color: white;
+            margin-top: 30px;
             padding: 10px;
             width: 100%;
+            justify-content: center;
         }
-
+        button:hover{
+            opacity: 0.8;
+        }
         .footer {
             display: flex;
             justify-content: center;
@@ -128,6 +174,48 @@
 
         .footer a:hover {
             color: rgb(122, 122, 122);
+
+        }
+
+        h3 {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h3:hover+.dropdown-menu {
+            display: block;
+        }
+
+        /* Estilos para el menú desplegable */
+        .dropdown-menu {
+            display: none;
+            /* Ocultar el menú inicialmente */
+            position: absolute;
+            margin-top: 3px;
+            /* Un poco de espacio debajo del h3 */
+            background-color: #F2D388;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            color: white;
+            padding: 10px;
+            z-index: 1;
+            width: 200px;
+            /* Ajusta el ancho del menú */
+        }
+
+        /* Estilo para los enlaces del menú */
+        .dropdown-menu a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+        }
+        .titulo{
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
         }
     </style>
 </head>
@@ -151,51 +239,60 @@
                 </ul>
 
                 <div class="iconos">
-                    <a href="./"><img src="img/usuario.png" alt="Usuario"></a>
+                    <a href="./index-login.html"><img src="img/usuario.png" alt="Usuario"></a>
                     <a href="./index-contacto.html"><img src="img/ig.png" alt="Instagram"></a>
                 </div>
             </div>
         </div>
 
         <div class="content">
-            <div class="secciones"> 
-                <h3>Busca por tipos de receta</h3>
+            <div class="secciones">
+                <h3>¡Busca recetas!</h3>
+                <div class="dropdown-menu">
+                    <a href="#">Sabores del mundo</a>
+                    <a href="#">Recetas con carne</a>
+                    <a href="#">Recetas con pescado</a>
+                    <a href="#">Recetas veggies</a>
+                </div>
             </div>
 
             <div class="cards">
-                <div class="card">
-                    <img src="img/Re-arrozcurry.jpg" alt="arroz-curry">
+
+                <div class="card"><h3>Sabores del mundo</h3>
+                    <div><img src="img/Re-arrozcurry.jpg" alt="arroz-curry"></div>
                     <div class="text">
-                        <h3>Arroz con curry</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quidem sapiente eveniet? Doloremque eos cumque voluptatum odit magni consequatur, quasi praesentium animi.</p>
+                        <h3>India: arroz con curry</h3>
+                        <p>Todo un clásico de la comida india, receta sencilla pero deliciosa, ¡querrás comerlo a
+                            diario!</p>
                         <button><a href="index-contacto.html">Receta completa</a></button>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="img/Re-gyozascarne.jpg" alt="gyozas-carne">
+                <div class="card"><h3>Con carne</h3>
+                    <div><img src="img/Re-gyozascarne.jpg" alt="gyozas-carne"></div>
                     <div class="text">
-                        <h3>Gyozas de carne</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quidem sapiente eveniet? Doloremque eos cumque voluptatum odit magni consequatur, quasi praesentium animi.</p>
+                        <h3>Gyozas de cerdo con verduras</h3>
+                        <p>¡Aprenderás al fin cómo preparar este delicioso plato japonés, te enseñamos todos sus
+                            secretos...</p>
                         <button><a href="index-contacto.html">Receta completa</a></button>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="img/Re-salmonespinacas.jpg" alt="salmon-espinacas">
+                <div class="card"><h3>Con pescado</h3>
+                    <div><img src="img/RE-SALMON.png" alt="salmon-espinacas"></div>
                     <div class="text">
-                        <h3>Salmón con espinacas y bechamel</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quidem sapiente eveniet?
-                            Doloremque eos cumque voluptatum odit magni consequatur, quasi praesentium animi.</p>
+                        <h3>Salmón con espinacas</h3>
+                        <p>¡Por fin vas a disfrutar de comer pescado! Una receta sencilla con un sabor increible...
+                        </p>
                         <button><a href="index-contacto.html">Receta completa</a></button>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="img/Re-ensaladameditbote.jpg" alt="ensaladabote">
+                <div class="card"><h3>Veggie</h3>
+                    <div><img src="img/Re-ensaladameditbote.jpg" alt="ensaladabote"></div>
                     <div class="text">
                         <h3>Ensalada Mediterránea</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quidem sapiente eveniet? Doloremque eos cumque voluptatum odit magni consequatur, quasi praesentium animi.</p>
+                        <p>¡Los clásicos siempre cumplen! Nuevos consejos para llevarla al siguiente nivel...</p>
                         <button><a href="index-contacto.html">Receta completa</a></button>
                     </div>
                 </div>
