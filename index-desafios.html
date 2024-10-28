@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef Connect Desafíos</title>
+    <link rel="stylesheet" href="styles.css">
 
     <style>
         * {
@@ -27,6 +28,8 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
+            
+            
         }
 
         .header {
@@ -68,17 +71,20 @@
             background-size: cover;
             background-color: #A7D2CB;
             padding: 100px;
+            
         }
 
         .content p {
 
             font-size: 15px;
             padding: 10px;
+            
 
         }
 
         .content h1 {
             font-size: 50px;
+            align-items: end;
         }
 
         .footer {
@@ -108,10 +114,16 @@
             flex-wrap: wrap;
             align-items: stretch;
             padding: 20px;
+            justify-content: center;
+           
+            
         }
 
         .card {
             flex: 0 0 200px;
+
+            /* Permite que el párrafo ocupe el espacio disponible */
+            flex-grow: 1;
             width: 300px;
             /* Ancho de la tarjeta */
             border: 1px solid #ccc;
@@ -120,12 +132,20 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin: 10px;
             background-color: #874C62;
+            justify-content: space-between; 
+     
+
+        
+            
         }
 
 
         .card-content {
             padding: 16px;
             text-align: center;
+            justify-content: space-between; 
+          
+           
 
         }
 
@@ -136,6 +156,9 @@
             height: auto;
             /* Altura exacta de la imagen */
             object-fit: cover;
+            justify-content: space-between; 
+            height: 400px; /* Fija la altura de la imagen */
+            object-fit: cover;
         }
 
         .card .text {
@@ -144,6 +167,9 @@
             padding: 0 20px 20px;
             align-items: center;
             color: white;
+            justify-content: space-between; 
+            
+            
 
 
         }
@@ -153,6 +179,7 @@
         h1 {
             text-align: center;
             color: black;
+            
 
 
         }
@@ -162,9 +189,12 @@
         .card button {
             background-color: rgb(255, 255, 255);
             border: 0px;
+            border-radius: 5px;
             margin-top: 30px;
             padding: 10px;
             color: #000000;
+            justify-content: space-between; 
+            
         }
 
         button:hover {
@@ -172,17 +202,17 @@
         }
 
         h3 {
-            color: #000000;
+            color:white;
             display: flex;
             flex-direction: column;
             cursor: pointer;
             margin: 20px;
             text-align: center;
+           
 
         }
-
+ 
         
-
 
     </style>
 </head>
